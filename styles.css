@@ -23,10 +23,11 @@ img {
     width: 24px;
 }
 
-.personal > img {
-    width: 45px;
+.personal > img,
+.user > img {
+    width: 50px;
 }
 
 .profile-card > img {
-    width: 70px;
+    width: 75px;
 }
