@@ -35,12 +35,17 @@ img {
     width: 24px;
 }
 
+button,
+input {
+    appearance: none;
+}
+
 .user > img {
     width: 50px;
 }
 
 .profile-card > img {
-    width: 75px;
+    width: 65px;
 }
 
 .container {
@@ -55,19 +60,34 @@ img {
     flex-direction: column;
 }
 
-.sidebar .dashboard,
 .sidebar .home,
 .sidebar .settings {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    align-items: center;
+    justify-items: center;
 }
 
 .sidebar .dashboard {
     flex: 0.25;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 2rem;
+}
+
+.dashboard > img {
+    width: 48px;
 }
 
 .sidebar .home {
     flex: 1;
+}
+
+.home a,
+.settings a {
+    justify-self: flex-start;
 }
 
 .sidebar .settings {
@@ -87,32 +107,46 @@ img {
 .header .search-container {
     flex: 2;
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .search-container label {
     flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .search-container input {
     flex: 7;
+    height: 2rem;
+    margin-right: 20px;
+
+    border-radius: 10px;
 }
 
 .header .personal {
     flex: 1;
     display: flex;
+    align-items: center;
 }
 
 .personal a {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .personal > img {
+    
     align-self: center;
     width: 50px;
 }
 
 .personal p {
     flex: 2;
+    display: flex;
+    justify-content: center;
 }
 
 .header .bottom {
@@ -131,7 +165,8 @@ img {
     grid-row: span 2;
 
     align-self: center;
-    justify-self: center;
+    justify-self: flex-end;
+    margin-right: 15px;
 }
 
 .profile-card h3 {
