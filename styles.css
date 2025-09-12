@@ -1,6 +1,13 @@
-body {
-    max-height: 100vh;
+* {
     margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+
+    font-size: 20px;
     display: flex;
 }
 
@@ -38,7 +45,7 @@ img {
 
 .container {
     display: grid;
-    grid-template: 1fr 5fr / 1fr 4fr;
+    grid-template: 1fr 5fr / 1fr 5fr;
 }
 
 .sidebar {
@@ -46,7 +53,6 @@ img {
 
     display: flex;
     flex-direction: column;
-    gap: 30px;
 }
 
 .sidebar .dashboard,
@@ -118,7 +124,7 @@ img {
     flex: 2;
 
     display: grid;
-    grid-template: 1fr 1fr / 1fr 5fr;
+    grid-template: 1fr 1fr / 1fr 3fr;
 }
 
 .profile-card img {
@@ -128,11 +134,11 @@ img {
     justify-self: center;
 }
 
-.profile-card h2 {
-
+.profile-card h3 {
+    align-self: flex-end;
 }
 
-.profile-card h1 {
+.profile-card h2 {
 
 }
 
@@ -151,6 +157,7 @@ img {
 .main {
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
+
 }
 
 .main .projects {
@@ -158,6 +165,7 @@ img {
     
     display: grid;
     grid-template: 1fr repeat(3, 3fr) / 1fr 1fr;
+    gap: 25px;
 }
 
 .projects > h2 {
@@ -165,7 +173,11 @@ img {
 }
 
 .projects .card {
-
+    min-height: 100px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card .quick-bar {
@@ -185,7 +197,7 @@ img {
 }
 
 .announcements .sections {
-    flex: 4;
+    flex: 6;
 
     display: flex;
     flex-direction: column;
@@ -200,7 +212,7 @@ img {
 }
 
 .trending > h2 {
-    flex: 1;
+
 }
 
 .trending .users {
@@ -213,6 +225,8 @@ img {
 .trending .user {
     display: grid;
     grid-template: 1fr 1fr / 1fr 3fr ;
+
+    flex: 1;   
 }
 
 .user img {
@@ -220,4 +234,6 @@ img {
 
     align-self: center;
     justify-self: center;
+
+    width: 50px;
 }
