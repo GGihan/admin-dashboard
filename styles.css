@@ -3,23 +3,29 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('fonts/Coolvetica-Regular.woff2') format('woff2'),
+        url('fonts/Coolvetica-Regular.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     min-height: 100vh;
     width: 100%;
 
     font-size: 20px;
     display: flex;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-div {
-    /* border: 1px solid blue; */
-}
-
-.sidebar,
-.header,
-.main {
-    /* border: 1px solid red;
-    background-color: beige; */
+h2,
+.personal > p,
+.user p:nth-child(2) {
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+    letter-spacing: 1.4px;
 }
 
 a {
@@ -82,7 +88,6 @@ input {
 
 .dashboard > img {
     width: 48px;
-    image: white;
 }
 
 .sidebar .home {
@@ -92,6 +97,7 @@ input {
 .home a,
 .settings a {
     justify-self: flex-start;
+    font-size: 22px;
 }
 
 .sidebar .settings {
@@ -187,10 +193,6 @@ label > img {
 
 .profile-card h3 {
     align-self: flex-end;
-}
-
-.profile-card h2 {
-
 }
 
 .header .nav {
