@@ -117,10 +117,14 @@ input {
     justify-content: flex-end;
 }
 
+label > img {
+    width: 30px;
+}
+
 .search-container input {
     flex: 7;
     height: 2rem;
-    margin-right: 20px;
+    margin-right: 50px;
 
     border-radius: 10px;
 }
@@ -179,10 +183,23 @@ input {
 
 .header .nav {
     flex: 1;
+    display: flex;
 }
 
 .nav ul {
     display: flex;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    
+}
+
+.nav li button {
+    width: 100px;
+    height: 35px;
+
+    border-radius: 15px;
 }
 
 .nav ul li {
@@ -201,10 +218,13 @@ input {
     display: grid;
     grid-template: 1fr repeat(3, 3fr) / 1fr 1fr;
     gap: 25px;
+    padding: 25px;
 }
 
 .projects > h2 {
     grid-column: span 2;
+
+    align-self: flex-end;
 }
 
 .projects .card {
@@ -212,7 +232,16 @@ input {
     min-width: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card .description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    height: 150px;
 }
 
 .card .quick-bar {
