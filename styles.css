@@ -12,19 +12,19 @@ body {
 }
 
 div {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .sidebar,
 .header,
 .main {
-    border: 1px solid red;
-    background-color: beige;
+    /* border: 1px solid red;
+    background-color: beige; */
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 ul li {
@@ -38,6 +38,7 @@ img {
 button,
 input {
     appearance: none;
+    outline: none;
 }
 
 .user > img {
@@ -58,6 +59,8 @@ input {
 
     display: flex;
     flex-direction: column;
+
+    background-color: rgb(69, 69, 186);
 }
 
 .sidebar .home,
@@ -79,6 +82,7 @@ input {
 
 .dashboard > img {
     width: 48px;
+    image: white;
 }
 
 .sidebar .home {
@@ -97,6 +101,8 @@ input {
 .header {
     display: flex;
     flex-direction: column;
+
+    background-color: whitesmoke;
 }
 
 .header .top {
@@ -127,6 +133,12 @@ label > img {
     margin-right: 50px;
 
     border-radius: 10px;
+    border: 2px solid rgb(69, 69, 186);
+    font-size: 20px;
+}
+
+.search-container input:focus {
+    border: 3px solid rgb(55, 55, 149);
 }
 
 .header .personal {
@@ -195,11 +207,24 @@ label > img {
     
 }
 
-.nav li button {
-    width: 100px;
-    height: 35px;
+.nav button {
+    min-width: 100px;
+    height: 40px;
 
     border-radius: 15px;
+    border: none;
+    background-color: rgb(69, 69, 186);
+    color: white;
+    font-size: 20px;
+}
+
+.nav button:hover {
+    background-color: rgb(80, 80, 202);
+}
+
+.nav button:active {
+    background-color: rgb(55, 55, 149);
+    box-shadow: 0 2px rgb(55, 55, 149);
 }
 
 .nav ul li {
@@ -210,6 +235,8 @@ label > img {
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
 
+    background-color: rgb(193, 206, 208);
+    box-shadow: 0px -2px 5px 0px rgb(193, 206, 208);
 }
 
 .main .projects {
@@ -234,6 +261,10 @@ label > img {
     flex-direction: column;
     justify-content: space-around;
     padding: 20px;
+
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid rgb(69, 69, 186);
 }
 
 .card .description {
@@ -254,6 +285,8 @@ label > img {
     flex: 1;
     display: flex;
     flex-direction: column;
+
+    padding: 0 25px 25px 0;
 }
 
 .announcements > h2 {
@@ -261,7 +294,7 @@ label > img {
     display: flex;
     align-self: center;
     align-items: center;
-    padding: 5px;
+    padding: 15px;
 }
 
 .announcements .sections {
@@ -271,7 +304,10 @@ label > img {
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-    gap: 30px;
+    gap: 20px;
+
+    background-color: white;
+    border-radius: 10px;
 }
 
 .sections .section {
@@ -292,10 +328,14 @@ label > img {
 
     display: flex;
     flex-direction: column;
+
+    padding: 0 25px 25px 0;
 }
 
 .trending > h2 {
-    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex: 0.5;
 }
 
 .trending .users {
@@ -303,13 +343,19 @@ label > img {
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    
+    background-color: white;
+    border-radius: 10px;
+    border-left: 5px solid rgb(69, 69, 186);
 }
 
 .trending .user {
     display: grid;
     grid-template: 1fr 1fr / 1fr 3fr ;
 
-    flex: 1;   
+    margin-left: 5px;
 }
 
 .user img {
