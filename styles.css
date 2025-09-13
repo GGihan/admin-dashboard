@@ -258,6 +258,10 @@ label > img {
 
 .announcements > h2 {
     flex: 1;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    padding: 5px;
 }
 
 .announcements .sections {
@@ -265,7 +269,22 @@ label > img {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.sections .section {
+    font-weight: bold;
+    max-height: 95px;
+    min-width: 250px;
+}
+
+.sections .section  p {
+    font-size: 16px;
+    font-weight: 400;
+
+    margin-top: 5px;
 }
 
 .main .trending {
@@ -276,7 +295,7 @@ label > img {
 }
 
 .trending > h2 {
-
+    text-align: center;
 }
 
 .trending .users {
@@ -300,4 +319,8 @@ label > img {
     justify-self: center;
 
     width: 50px;
+}
+
+.user p:nth-child(2) {
+    align-self: flex-end;
 }
